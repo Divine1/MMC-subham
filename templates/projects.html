@@ -1,0 +1,32 @@
+<br>
+<h2 class="agile-inner-title">Projects</h2>	
+<div class="container" style="height:400px">
+ 
+          
+  <table class="table" >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Slot Remaining</th>
+		<th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="list in lists">
+        <td>{{list[1]}}</td>
+        <td>{{list[2]}}</td>
+        <td>{{list[3]}}</td>
+		<td><a href="#/projects/{{list[0]}}">View Details</a></td>
+      </tr>
+     
+   
+    </tbody>
+  </table>
+			<?php 
+			session_start();
+			if( isset($_SESSION['login']) && $_SESSION['login'] == "success"){?>
+					<button>Add Data</button>
+			<?php }else{ echo "no button";}?>
+			
+</div>

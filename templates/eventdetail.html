@@ -1,0 +1,56 @@
+<br>
+	<h2 class="agile-inner-title">Event Details</h2>	
+	<div class="items">
+		<div class="container" ng-repeat="list in lists">
+			<div class="col-md-6 item-left">
+				<h4>Event Details : </h4>
+				<p>{{list[2]}}</p>
+			</div>
+			<div class="col-md-6 item-right">
+				<div class="col-sm-6 item-left-img text-center">
+					<h4>Anchors</h4>
+					<p>{{list[5]}}</p>
+				</div>
+				<div class="col-sm-6 item-left-img text-center">
+					<h4>Date</h4>
+					<p>{{list[4]}}</p>
+				</div>
+				<div class="col-sm-6 item-left-img text-center">
+					<h4>Email</h4>
+					<p>{{list[6]}}</p>
+				</div>
+				<div class="col-sm-6 item-left-img text-center">
+					<h4>No. Of Members</h4>
+					<p>{{list[3]}}</p>
+				</div>
+				
+				<div class="clearfix"></div>
+			</div>
+			<button class="btn btn-primary" data-toggle="modal" data-target="#myModal4">Register</button>
+					<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+										&times;</button>
+									<h4 class="modal-title" id="myModalLabel">Register</h4>
+										<div class="agileits-login">
+											<form>
+												<input type="text" name="employeeId1" ng-model="$parent.employeeId" placeholder="Employee Id" required=""/>
+												<!--<input type="text" class="email" ng-model="ema" name="Email" placeholder="Username" required=""/> -->
+													<div class="w3ls-submit">
+														<div class="submit-text">
+															<button class="btn btn-success" ng-click="eventRegister()">REGISTER</button><br> 
+														</div>	
+													</div>	
+											</form>
+										</div> 
+								</div>
+								
+							</div>
+						</div>
+					</div>
+			
+			<div class="clearfix"></div>
+		</div>
+	</div>
